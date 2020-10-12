@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/rlAtas"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/colorPrimary">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/pp"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivProfile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="Rizky Aditya Fahreza"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvProfession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:gravity="center"
+            android:text="Mobile Developer"
+            android:textColor="#fed" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/bg_outlineradius">
+
+        <TextView
+            android:id="@+id/tvLabelPhoto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Photo"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvLabelFollowers"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Followers"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvLabelFollowing"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Following"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvPhoto"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelPhoto"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="160"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFollowers"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelFollowers"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:text="2254"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvFollowing"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelFollowing"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            android:text="524"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlAtas">
+
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_email_24" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="200dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:text="admin@rizkyraf.id"
+            app:layout_constraintBottom_toBottomOf="@+id/ivEmail"
+            app:layout_constraintStart_toEndOf="@+id/ivEmail"
+            app:layout_constraintTop_toTopOf="@+id/ivEmail" />
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivEmail"
+            app:layout_constraintStart_toStartOf="@+id/ivEmail"
+            app:layout_constraintTop_toBottomOf="@+id/ivEmail"
+            app:srcCompat="@drawable/ic_phone_android_24" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="200dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:text="081234567890"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPhone"
+            app:layout_constraintStart_toEndOf="@+id/ivPhone"
+            app:layout_constraintTop_toTopOf="@+id/ivPhone" />
+
+        <TextView
+            android:id="@+id/tvAddToGroup"
+            android:layout_width="200dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:text="Add to group"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAddGroup"
+            app:layout_constraintStart_toEndOf="@+id/ivAddGroup"
+            app:layout_constraintTop_toTopOf="@+id/ivAddGroup"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tvAddToGroup2"
+            android:layout_width="200dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:text="Show all comment"
+            app:layout_constraintBottom_toBottomOf="@+id/ivForum"
+            app:layout_constraintStart_toEndOf="@+id/ivForum"
+            app:layout_constraintTop_toTopOf="@+id/ivForum"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/ivAddGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivPhone"
+            app:layout_constraintStart_toStartOf="@+id/ivPhone"
+            app:layout_constraintTop_toBottomOf="@+id/ivPhone"
+            app:srcCompat="@drawable/ic_group_add_24" />
+
+        <ImageView
+            android:id="@+id/ivForum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivAddGroup"
+            app:layout_constraintStart_toStartOf="@+id/ivAddGroup"
+            app:layout_constraintTop_toBottomOf="@+id/ivAddGroup"
+            app:srcCompat="@drawable/ic_forum_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
